@@ -149,6 +149,7 @@ export function Contact() {
           <dl className="contact-list reveal">
             <div><dt>Business</dt><dd>{business.name}</dd></div>
             <div><dt>Owner</dt><dd>{business.owner}</dd></div>
+            <div><dt>Location</dt><dd><a href={links.maps} target="_blank" rel="noopener">{business.address}</a></dd></div>
             <div><dt>Phone</dt><dd><a href={links.call}>{business.phone}</a></dd></div>
             <div><dt>WhatsApp</dt><dd><a href={links.whatsapp} target="_blank" rel="noopener">{business.phone}</a></dd></div>
             <div><dt>Instagram</dt><dd><a href={business.instagram} target="_blank" rel="noopener">{business.instagramHandle}</a></dd></div>
@@ -159,9 +160,12 @@ export function Contact() {
             <div className="map-grid" aria-hidden="true" />
             <span className="map-pin" aria-hidden="true"><MapPin size={22} /></span>
             <div className="map-copy">
-              <h3>Find us</h3>
-              <p>Ask us on WhatsApp and we’ll send you our location pin and directions.</p>
-              <a className="btn btn-line" href={links.whatsappLocation} target="_blank" rel="noopener">Get directions</a>
+              <h3>Find us in {business.location}</h3>
+              <p>{business.address}. Message us on WhatsApp for the exact pin.</p>
+              <div className="cta-row" style={{ justifyContent: 'flex-start' }}>
+                <a className="btn btn-line" href={links.maps} target="_blank" rel="noopener">Open in Maps</a>
+                <a className="btn btn-line" href={links.whatsappLocation} target="_blank" rel="noopener">Ask for pin</a>
+              </div>
             </div>
           </div>
           <div className="hours-card reveal">
@@ -185,6 +189,7 @@ export function SiteFooter() {
           <div>
             <a href="#home" className="wordmark">R.K <span>CAR WASH</span></a>
             <p>{business.tagline}</p>
+            <p>{business.address}</p>
           </div>
           <div className="footer-links">
             <a href={links.call}>Call {business.phone}</a>

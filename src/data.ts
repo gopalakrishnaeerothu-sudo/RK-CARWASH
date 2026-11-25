@@ -8,6 +8,8 @@ export const business = {
   phoneIntl: '+919676467987',
   instagram: 'https://www.instagram.com/krishnamrajukshatriyas',
   instagramHandle: '@krishnamrajukshatriyas',
+  location: 'Devarapalli',
+  address: 'Devarapalli, Andhra Pradesh 534313',
 };
 
 const waText = 'Hello R.K CAR WASH, I would like to enquire about your vehicle washing services.';
@@ -17,6 +19,7 @@ export const links = {
   whatsappLocation: `https://wa.me/919676467987?text=${encodeURIComponent(
     'Hello R.K CAR WASH, could you please share your location and timings?',
   )}`,
+  maps: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(business.address)}`,
 };
 
 export const nav = [

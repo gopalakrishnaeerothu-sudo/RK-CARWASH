@@ -4,3 +4,6 @@ raw
 .vercel
 *.local
 .DS_Store
+
+.vercel
+.env*
